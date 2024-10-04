@@ -23,6 +23,8 @@ import {
 import { Edit, Delete } from '@mui/icons-material';
 import './App.css';
 
+const API_URL = 'https://express-backend-beta.vercel.app/api/users';
+
 function App() {
   const [users, setUsers] = useState([]);
   const [newUser, setNewUser] = useState({ name: '', email: '' });
@@ -37,7 +39,7 @@ function App() {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('https://express-backend-eight.vercel.app/');
+      const response = await axios.get(API_URL);
       setUsers(response.data.users || []);
     } catch (error) {
       console.error('Error fetching users:', error);
@@ -47,7 +49,7 @@ function App() {
   // Add a new user
   const addUser = async () => {
     try {
-      const response = await axios.post('https://express-backend-eight.vercel.app/', newUser);
+      const response = await axios.post(API_URL, newUser);
       setUsers([...users, response.data.newUser]);
       setNewUser({ name: '', email: '' });
       handleClose(); // Close the add dialog after adding user
@@ -59,7 +61,7 @@ function App() {
   // Update an existing user
   const updateUser = async () => {
     try {
-      const response = await axios.put(`https://express-backend-eight.vercel.app/${editingUser.id}`, editingUser);
+      const response = await axios.put(`${API_URL}/${editingUser.id}`, editingUser);
       setUsers(users.map(user => (user.id === editingUser.id ? response.data.updatedUser : user)));
       setEditingUser(null);
       handleEditClose(); // Close the edit dialog after updating user
@@ -98,7 +100,7 @@ function App() {
   // Delete user function
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`https://express-backend-eight.vercel.app/${id}`);
+      await axios.delete(`${API_URL}/${id}`);
       setUsers(users.filter((user) => user.id !== id));
     } catch (error) {
       console.error('Error deleting user:', error);
