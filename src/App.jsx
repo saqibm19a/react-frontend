@@ -98,14 +98,15 @@ function App() {
   };
 
   // Delete user function
-  const deleteUser = async (id) => {
-    try {
-      await axios.delete(`${API_URL}/${id}`);
-      setUsers(users.filter((user) => user.id !== id));
-    } catch (error) {
-      console.error('Error deleting user:', error);
-    }
-  };
+const deleteUser = async (id) => {
+  try {
+    await axios.delete(`${API_URL}/${id}`);
+    setUsers(users.filter((user) => user.id !== id));
+  } catch (error) {
+    console.error('Error deleting user:', error);
+  }
+};
+
 
   return (
     <Container>
