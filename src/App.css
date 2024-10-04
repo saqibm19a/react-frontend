@@ -1,0 +1,116 @@
+.App {
+  font-family: Arial, sans-serif;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #0c0d0e;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.header {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.form-header {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  padding: 8px 16px;
+  background-color: #10247e9a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0026ff;
+}
+
+.list-section {
+  margin-top: 20px;
+  /* background-color: #1d2022; */ 
+}
+
+.list-header {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.user-list {
+  list-style-type: none;
+  padding: 0;
+  color: #ffffff;
+}
+
+.user-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #0026ff;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-btn, .delete-btn, .cancel-btn {
+  padding: 8px;
+  margin: 5px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #10247e9a;
+}
+
+.delete-btn {
+  background-color: #f44336;
+}
+
+.cancel-btn {
+  background-color: #757575;
+}
+
+.edit-btn:hover {
+  background-color: #0026ff;
+}
+
+.delete-btn:hover {
+  background-color: #fd0000;
+}
+
+.cancel-btn:hover {
+  background-color: #4e4a4a;
+}
