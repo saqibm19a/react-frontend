@@ -23,7 +23,7 @@ import {
 import { Edit, Delete } from '@mui/icons-material';
 import './App.css';
 
-const API_URL = 'https://express-backend-umber.vercel.app/';
+const API_URL = 'https://express-backend-umber.vercel.app/api/users';
 
 function App() {
   const [users, setUsers] = useState([]);
